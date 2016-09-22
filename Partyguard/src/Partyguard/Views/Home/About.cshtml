@@ -1,0 +1,74 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNet.Http
+@using Microsoft.AspNet.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    ViewData["Title"] = "Add New Customer";
+}
+<h2>@ViewData["Title"].</h2>
+
+<section>
+    <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal" role="form">
+
+        <hr />
+        <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
+
+        <div class="form-group">
+            <label name="University" class="col-md-2 control-label">University</label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-md-2 control-label">House Name</label>
+            <div class="col-md-10">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="University" class="col-md-2 control-label">House Nick Name</label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label name="University" class="col-md-2 control-label">Chapter</label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="University" class="col-md-2 control-label">User Name</label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label name="University" class="col-md-2 control-label">Email</label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div>
+            <label name="University" class="col-md-2 control-label">House Location</label>
+            <div class="col-md-10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12162.72835953462!2d-94.87984202194059!3d40.34939782315892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87eac51f2b51b76f%3A0x368125d2c2ce258!2sAlpha+Gamma+Rho+Fraternity!5e0!3m2!1sen!2sus!4v1469039484207" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                
+            </div>
+        </div>
+          <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="~/views/home/About.cshtml"> <input type="button" class="btn btn-default" value="Create Account" style="background-color:antiquewhite" /></a>
+                @*<button type="submit" class="btn btn-default" style="background-color:antiquewhite">Log in</button>*@
+            </div>
+        </div>
+    </form>
+</section>
